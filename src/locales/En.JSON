@@ -1,0 +1,98 @@
+{
+  "header": {
+    "proyectos": "Projects",
+    "sobreMi": "About me",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "nombre": "Ramiro Serrato",
+    "titulo": "Full-Stack Developer",
+    "descripcion": "I build web and mobile applications, integrating databases and artificial intelligence models."
+  },
+  "proyectos": {
+    "titulo": "Projects",
+    "banksheets": {
+      "descripcion": "Application for accountants that automates reconciliations and converts PDFs to Excel, quickly and accurately."
+    },
+    "moviereviews": {
+      "descripcion": "Records movie reviews through a FastAPI-powered API and uses an AI model to classify them as positive or negative."
+    }
+  },
+  "sobreMi": {
+    "titulo": "About me",
+    "texto1": "I'm from Argentina, I'm 22 years old and I live in Buenos Aires. I'm one step away from graduating as a",
+    "carrera": "University Technician in Computer Programming",
+    "universidad": "at National University of San Martín.",
+    "texto2": "I'm a",
+    "rol": "full-stack developer",
+    "texto3": "I enjoy working on both frontend and backend, integrating various types of databases and, when the project calls for it, artificial intelligence models.",
+    "texto4": "I have no professional IT experience. Throughout my degree I learned to design applications and websites in an educational setting, and I apply that knowledge to build projects like the ones shown on this page.",
+    "texto5": "I also have knowledge in telecommunications and networks, numerical methods applied to programming, data processing and operating systems."
+  },
+  "contacto": {
+    "titulo": "Contact",
+    "descripcion": "Have a project in mind or just want to chat? Reach out through any of these channels.",
+    "mailCopiado": "Email copied!",
+    "telefonoCopiado": "Phone copied!",
+    "cv": "My CV"
+  },
+  "modal": {
+    "leerMas": "Read more",
+    "repositorio": "Repository",
+    "pagina": "BankSheets website"
+  },
+  "banksheets": {
+    "epigrafe1": "Landing Page presentation when entering the site.",
+    "epigrafe2": "Initial dashboard with charts and statistics from the latest statements.",
+    "epigrafe3": "PDF extraction tool.",
+    "epigrafe4": "Reconciliation tool.",
+    "epigrafe5": "Investment tracking tool.",
+    "intro": "is the final project for the course",
+    "materia": "Software Project",
+    "intro2": "whose assignment was to build, as a group, a free project with the condition that it be",
+    "redituable": "profitable",
+    "intro3": "and that we would have the opportunity to sell it in the future.",
+    "parrafo2": "After getting in touch with an accountant, we learned about the problem they faced when transcribing",
+    "pdfs": "bank statement PDFs to Excel",
+    "parrafo2b": "Doing it manually is a task that takes entire days of work and no existing tool does it quickly and accurately. So we created",
+    "parrafo2c": "to streamline accountants' workflows at a fair price.",
+    "motor": "Python engine",
+    "parrafo3": "that handles all the core operations behind the project's tools. Using libraries such as",
+    "parrafo3b": "this engine performs 3 main tasks:",
+    "tarea1titulo": "PDF statement to Excel conversion",
+    "tarea1desc": "Geometric data extraction, free from the errors of generic readers.",
+    "tarea2titulo": "Tax reconciliation",
+    "tarea2desc": "Automatically cross-checks what was declared to ARCA against the company's sub-ledger.",
+    "tarea3titulo": "Investments",
+    "tarea3desc": "Portfolio tracking with real cost calculation per asset.",
+    "parrafo4": "The page's interface is built with",
+    "parrafo4b": "and for orchestration and logic it uses",
+    "parrafo4c": "which manage the user and token systems respectively. For the membership system we use",
+    "esta": "This application is built on a"
+  },
+  "moviereviews": {
+    "epigrafe1": "Main page screen.\nFirst option: shows the movies page. Second option: redirects to the form.",
+    "epigrafe2": "Movies screen, with a search by name option and a filter for the most reviewed ones.",
+    "epigrafe3": "Form. The DB creates a user if none is registered with that name.\nIf one already exists, it assigns that user's ID to the review.",
+    "epigrafe4": "Window showing the reviewed movie's data and the result returned by the AI based on the review.",
+    "epigrafe5": "Dynamic movie search.",
+    "epigrafe6": "Modal shown when selecting a movie, displaying its data and reviews.\nEach review includes the percentage calculated by the AI and the description shows an average rating across all reviews.",
+    "materia": "Databases",
+    "intro": "Final project for the course",
+    "intro2": "whose assignment was to build, as a group, a page integrating",
+    "sql": "SQL databases",
+    "intro3": "with",
+    "ml": "Machine Learning",
+    "intro4": "models or Artificial Intelligence. Our idea was the following: an application that takes movie reviews and classifies them as",
+    "positivas": "Positive",
+    "negativas": "Negative",
+    "parrafo2": "To do this, we built an engine in",
+    "parrafo2b": "that trains on a dataset of 100,000 English movie reviews and learns the connotation of words to assign the rating. The translation of reviews (to display them in Spanish) is done with the googleTranslate library, so it may occasionally fail.",
+    "parrafo3": "We used",
+    "parrafo3b": "to connect the frontend with the MySQL Workbench DB. The frontend built in",
+    "parrafo3c": "offers two options: 'Submit a review', which leads to a form that POSTs to the DB, and opening the Movies tab, which GETs movies by name. In this tab, selecting a movie shows its data from a raw JSON and its reviews from the DB.",
+    "parrafo4": "Being an educational project, it",
+    "sinDeploy": "has no deployment",
+    "parrafo4b": "since what we built was enough to pass the project. Pending features include: a user and friends system (like IMDB's), recommendation or news systems (which could be implemented using caching) and an actual deployment."
+  }
+}
