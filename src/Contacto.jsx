@@ -5,7 +5,7 @@ import { GithubIcon, LinkedinIcon, InstagramIcon } from "./components/icons";
 
 const EMAIL = "ramaserrato@gmail.com";
 const TELEFONO = "+54 11 6886-9291";
-const linkStyle = "flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) hover:text-(--color-accent) cursor-pointer";
+const linkStyle = "flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) hover:text-(--color-text) transition-colors cursor-pointer";
 
 function CopiarBoton({ valor, label, mensajeCopiado, icon: Icon, copiado, onCopiar }) {
   return (
@@ -41,13 +41,13 @@ export function Contacto() {
 
   return (
     <section id="contacto" className="section">
-      <h2 className="anim-fade-up anim-delay-4 text-xl font-medium text-(--color-text) mb-4">
+      <h2 className="anim-fade-up anim-delay-4 text-xl font-display font-semibold text-(--color-text) mb-4">
         {t("contacto.titulo")}
       </h2>
-      <p className="anim-fade-up anim-delay-4 text-(--color-text-secondary) mb-6 max-w-xxl">
+      <p className="anim-fade-up anim-delay-4 text-(--color-text-secondary) mb-6 max-w">
         {t("contacto.descripcion")}
       </p>
-      <div className="anim-fade-up anim-delay-4 flex flex-col sm:flex-row gap-4">
+      <div className="anim-fade-up anim-delay-4 flex flex-wrap gap-4">
         <CopiarBoton
           valor={EMAIL}
           label={EMAIL}

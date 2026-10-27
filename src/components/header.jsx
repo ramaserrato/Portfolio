@@ -16,9 +16,10 @@ export default function Header() {
   const toggleIdioma = () => i18n.changeLanguage(esEspanol ? "en" : "es");
 
   return (
-    <header className="sticky top-0 z-10 backdrop-blur-sm border-b border-white/5">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <span className="font-semibold text-(--color-text)">ramaserrato.dev</span>
+    <header className="sticky top-0 z-20">
+      <div className="absolute inset-x-0 top-0 h-full bg-(--color-bg)/70 backdrop-blur-xl border-b border-white/5" />
+      <div className="relative max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+        <span className="font-display font-semibold text-(--color-text) tracking-tight">ramaserrato.dev</span>
 
         {/* Desktop nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm">
@@ -26,7 +27,7 @@ export default function Header() {
             <a
               key={tab.id}
               href={`#${tab.id}`}
-              className="text-(--color-text-secondary) hover:text-(--color-accent) transition-colors"
+              className="relative text-(--color-text-secondary) hover:text-(--color-text) transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-(--color-accent)/70 after:transition-transform hover:after:scale-x-100"
             >
               {t(tab.key)}
             </a>
@@ -34,7 +35,7 @@ export default function Header() {
           <button
             type="button"
             onClick={toggleIdioma}
-            className="ml-2 text-xs font-mono-custom font-medium px-2.5 py-1 rounded-full border border-white/10 text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent)/50 transition-all cursor-pointer"
+            className="ml-2 text-xs font-mono-custom font-medium px-2.5 py-1 rounded-full border border-white/10 text-(--color-text-secondary) hover:text-(--color-text) hover:border-(--color-accent)/60 hover:shadow-[0_0_0_4px_rgba(242,166,90,0.08)] transition-all cursor-pointer"
           >
             {esEspanol ? "EN" : "ES"}
           </button>
@@ -45,14 +46,14 @@ export default function Header() {
           <button
             type="button"
             onClick={toggleIdioma}
-            className="text-xs font-mono-custom font-medium px-2.5 py-1 rounded-full border border-white/10 text-(--color-text-secondary) hover:text-(--color-accent) transition-all cursor-pointer"
+            className="ml-2 text-xs font-mono-custom font-medium px-2.5 py-1 rounded-full border border-white/10 text-(--color-text-secondary) hover:text-(--color-text) hover:border-(--color-accent)/60 hover:shadow-[0_0_0_4px_rgba(242,166,90,0.08)] transition-all cursor-pointer"
           >
             {esEspanol ? "EN" : "ES"}
           </button>
           <button
             type="button"
             onClick={() => setMenuAbierto(!menuAbierto)}
-            className="text-(--color-text-secondary) hover:text-(--color-accent) transition-colors cursor-pointer"
+            className="text-(--color-text-secondary) hover:text-(--color-text) transition-colors cursor-pointer"
           >
             {menuAbierto ? <X size={22} /> : <Menu size={22} />}
           </button>

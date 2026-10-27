@@ -3,23 +3,24 @@ import { GithubIcon } from "./icons";
 
 export default function ProyectoCard({ proyecto }) {
   return (
-    <div className="relative bg-(--color-bg-card) rounded-2xl border border-white/10 flex flex-col overflow-hidden group hover:border-(--color-accent)/50 transition-all duration-500">
+    <div className="relative bg-(--color-bg-card)/80 backdrop-blur-sm rounded-2xl border border-white/10 flex flex-col overflow-hidden group hover:border-(--color-accent)/70 hover:shadow-[0_40px_120px_-80px_rgba(242,166,90,0.9)] transition-all duration-500">
 
       {/* Imagen — oculta por defecto, aparece con altura en hover */}
       {proyecto.imagen && (
-        <div className="h-0 group-hover:h-48 transition-all duration-500 overflow-hidden shrink-0">
+        <div className="h-0 group-hover:h-52 transition-all duration-700 overflow-hidden shrink-0 relative">
           <img
             src={proyecto.imagen}
             alt={proyecto.titulo}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700"
           />
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-(--color-bg-card) to-transparent" />
         </div>
       )}
 
       {/* Contenido */}
       <div className="p-6 flex flex-col gap-4">
         <div>
-          <h3 className="font-display text-lg font-semibold text-(--color-text)">{proyecto.titulo}</h3>
+          <h3 className="font-display text-lg font-semibold text-(--color-text) tracking-tight">{proyecto.titulo}</h3>
           <p className="text-sm text-(--color-text-secondary) mt-2 leading-relaxed">
             {proyecto.descripcion}
           </p>
@@ -29,7 +30,7 @@ export default function ProyectoCard({ proyecto }) {
           {proyecto.stack.map((tech) => (
             <span
               key={tech}
-              className="font-mono-custom text-xs font-medium px-2.5 py-1 rounded-full bg-(--color-accent-secondary)/15 text-(--color-accent-secondary)"
+              className="font-mono-custom text-xs font-medium px-2.5 py-1 rounded-full border border-(--color-accent-secondary)/40 text-(--color-accent-secondary)"
             >
               {tech}
             </span>
@@ -43,7 +44,7 @@ export default function ProyectoCard({ proyecto }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="flex items-center gap-1.5 text-sm font-medium text-(--color-text-secondary) hover:text-(--color-accent)"
+              className="flex items-center gap-1.5 text-sm font-medium text-(--color-text-secondary) hover:text-(--color-text) transition-colors"
             >
               <GithubIcon size={16} />
               Repositorio
@@ -55,7 +56,7 @@ export default function ProyectoCard({ proyecto }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="flex items-center gap-1.5 text-sm font-medium text-(--color-text-secondary) hover:text-(--color-accent)"
+              className="flex items-center gap-1.5 text-sm font-medium text-(--color-text-secondary) hover:text-(--color-text) transition-colors"
             >
               <ExternalLink size={16} />
               Demo
